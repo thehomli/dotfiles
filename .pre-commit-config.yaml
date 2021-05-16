@@ -23,6 +23,10 @@ repos:
     -   id: name-tests-test
         args: ['--django']
     -   id: trailing-whitespace
+-   repo: https://github.com/asottile/reorder_python_imports
+    rev: v2.5.0
+    hooks:
+    -   id: reorder-python-imports
 -   repo: https://github.com/pycqa/pylint
     rev: v2.8.2
     hooks:
