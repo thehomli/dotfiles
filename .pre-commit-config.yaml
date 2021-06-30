@@ -24,6 +24,7 @@ repos:
     -   id: requirements-txt-fixer
     -   id: name-tests-test
         args: ['--django']
+        exclude: ^.*\b(factories)\b.*$
     -   id: trailing-whitespace
 -   repo: https://github.com/asottile/reorder_python_imports
     rev: v2.5.0
