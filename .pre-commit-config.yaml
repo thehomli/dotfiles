@@ -54,3 +54,9 @@ repos:
     - id: rubocop
     - id: script-must-not-have-extension
     - id: shellcheck
+-   repo: https://github.com/pre-commit/mirrors-eslint
+    rev: master  # Eslint your codes
+    hooks:
+    -   id: eslint
+        files: \.[jt]sx?$  # *.js, *.jsx, *.ts and *.tsx
+        types: [file]
