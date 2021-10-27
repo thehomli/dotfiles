@@ -7,6 +7,8 @@ repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: master
     hooks:
+    -   id: detect-aws-credentials # do not commit aws creds
+    -   id: pretty-format-json # Format your json in a nice way
     -   id: check-added-large-files
         args: ['--maxkb=10000']
     -   id: check-merge-conflict
