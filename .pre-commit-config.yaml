@@ -40,9 +40,3 @@ repos:
     hooks:
     -   id: bandit
         args: ['-iii', '-ll','--skip','B301']
--   repo: https://github.com/pre-commit/mirrors-eslint
-    rev: 'v8.2.0'
-    hooks:
-      - id: eslint
-        files: \.[jt]sx?$|\.vue?$
-        types: [file]
