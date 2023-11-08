@@ -37,7 +37,7 @@ repos:
     -   id: pylint
         exclude: ^.*\b(migrations)\b.*$
 -   repo: https://github.com/pycqa/bandit
-    rev: v1.7.5
+    rev: 1.7.5
     hooks:
     -   id: bandit
         args: ['-iii', '-ll','--skip','B301']
