@@ -1,13 +1,13 @@
 repos:
 -   repo: https://github.com/psf/black
-    rev: 22.6.0
+    rev: 23.10.1
     hooks:
     -   id: black
         args: ['--skip-string-normalization','--line-length','100']
         exclude: ^.*\b(migrations)\b.*$
         additional_dependencies: ['click==8.0.4']
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.3.0
+    rev: v4.5.0
     hooks:
     -   id: check-added-large-files
         args: ['--maxkb=10000']
@@ -28,20 +28,20 @@ repos:
         exclude: ((^.*\b(factories)\b.*$)|(^.*\b(fixtures)\b.*$)|(^.*\b(mixins)\b.*$)|(^.*\b(test_app)\b.*$))
     -   id: trailing-whitespace
 -   repo: https://github.com/asottile/reorder_python_imports
-    rev: v3.8.2
+    rev: v3.12.0
     hooks:
     -   id: reorder-python-imports
 -   repo: https://github.com/pycqa/pylint
-    rev: v2.14.5
+    rev: v3.0.2
     hooks:
     -   id: pylint
         exclude: ^.*\b(migrations)\b.*$
 -   repo: https://github.com/pycqa/bandit
-    rev: 1.7.4
+    rev: v1.7.5
     hooks:
     -   id: bandit
         args: ['-iii', '-ll','--skip','B301']
 -   repo: https://github.com/avilaton/add-msg-issue-prefix-hook
-    rev: v0.0.5  # Use the ref you want to point at
+    rev: v0.0.9  # Use the ref you want to point at
     hooks:
     -   id: add-msg-issue-prefix
