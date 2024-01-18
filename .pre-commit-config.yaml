@@ -55,5 +55,9 @@ repos:
     rev: v8.56.0
     hooks:
     -   id: eslint
+        additional_dependencies:
+        -   eslint@8.56.0
+        -   eslint-plugin-vue@9.20.1
+        -   "@babel/eslint-parser@7.15.8"
         files: \.(js|css|html|vue|ts|jsx)$
         types: [file]
