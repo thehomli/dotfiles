@@ -9,6 +9,9 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'vue/multi-word-component-names': 'off',
     'vue/no-v-model-argument': 'off',
+    'vue/no-multiple-template-root': 'off',
+    'vue/require-valid-default-prop': 'off',
+    'vue/require-v-for-key': 'off'
   },
   overrides: [
     {
