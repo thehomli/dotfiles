@@ -6,64 +6,45 @@ repos:
         args: ['--skip-string-normalization','--line-length','100']
         exclude: ^.*\b(migrations)\b.*$
         additional_dependencies: ['click==8.0.4']
-        stages: [commit]
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
     -   id: check-added-large-files
         args: ['--maxkb=10000']
-        stages: [commit]
     -   id: check-merge-conflict
-        stages: [commit]
     -   id: check-docstring-first
-        stages: [commit]
     -   id: check-json
-        stages: [commit]
     -   id: check-yaml
         args: [--allow-multiple-documents]
-        stages: [commit]
     -   id: check-toml
-        stages: [commit]
     -   id: debug-statements
-        stages: [commit]
     -   id: detect-private-key
-        stages: [commit]
     -   id: end-of-file-fixer
-        stages: [commit]
     -   id: fix-encoding-pragma
-        stages: [commit]
     -   id: mixed-line-ending
-        stages: [commit]
     -   id: requirements-txt-fixer
-        stages: [commit]
     -   id: name-tests-test
         args: ['--django']
         exclude: ((^.*\b(factories)\b.*$)|(^.*\b(fixtures)\b.*$)|(^.*\b(mixins)\b.*$)|(^.*\b(test_app)\b.*$))
-        stages: [commit]
     -   id: trailing-whitespace
-        stages: [commit]
 -   repo: https://github.com/asottile/reorder_python_imports
-    rev: v4.1.0
+    rev: v3.14.0
     hooks:
     -   id: reorder-python-imports
-        stages: [commit]
 -   repo: https://github.com/pycqa/pylint
     rev: v3.3.4
     hooks:
     -   id: pylint
         exclude: ^.*\b(migrations)\b.*$
-        stages: [commit]
 -   repo: https://github.com/pycqa/bandit
     rev: 1.8.3
     hooks:
     -   id: bandit
         args: ['-iii', '-ll','--skip','B301']
-        stages: [commit]
 -   repo: https://github.com/avilaton/add-msg-issue-prefix-hook
-    rev: v0.0.11
+    rev: v0.0.11  # Use the ref you want to point at
     hooks:
     -   id: add-msg-issue-prefix
-        stages: [commit]
 -   repo: https://github.com/pre-commit/mirrors-prettier
     rev: v4.0.0-alpha.8
     hooks:
@@ -71,7 +52,6 @@ repos:
         files: \.(js|css|vue|ts|jsx|html)$
         types: [file]
         exclude: ^templates/.*\.html$
-        stages: [commit]
 -   repo: https://github.com/pre-commit/mirrors-eslint
     rev: v8.56.0
     hooks:
@@ -83,4 +63,3 @@ repos:
         files: \.(js|css|vue|ts|jsx|html)$
         types: [file]
         exclude: ^templates/.*\.html$
-        stages: [commit]
