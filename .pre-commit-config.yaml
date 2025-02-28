@@ -28,7 +28,7 @@ repos:
         exclude: ((^.*\b(factories)\b.*$)|(^.*\b(fixtures)\b.*$)|(^.*\b(mixins)\b.*$)|(^.*\b(test_app)\b.*$))
     -   id: trailing-whitespace
 -   repo: https://github.com/asottile/reorder_python_imports
-    rev: v4.1.0
+    rev: v3.14.0
     hooks:
     -   id: reorder-python-imports
 -   repo: https://github.com/pycqa/pylint
