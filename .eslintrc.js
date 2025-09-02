@@ -11,7 +11,11 @@ module.exports = {
     'vue/no-v-model-argument': 'off',
     'vue/no-multiple-template-root': 'off',
     'vue/require-valid-default-prop': 'off',
-    'vue/require-v-for-key': 'off'
+    'vue/require-v-for-key': 'off',
+    'no-unused-vars': ['error', { 
+      'varsIgnorePattern': '^props$',
+      'argsIgnorePattern': '^_'
+    }]
   },
   overrides: [
     {
